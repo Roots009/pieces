@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Fun Facts Generator</h1>
+        <p id="fun-fact">Click the button to generate a fun fact!</p>
+        <button id="generate-button">Generate Another Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Different colors can evoke different emotions. For example, blue is often associated with calmness, while red can evoke excitement or passion.",
+            "Fashion trends often cycle every 20 years. Styles from the 90s, for example, have made a significant comeback in recent years.",
+            "Engaging in creative activities like painting or crafting can significantly reduce stress and improve mental health.",
+            "Patterns in design can influence how we perceive space. For instance, vertical stripes can make a room feel taller.",
+            "Many fashion designers draw inspiration from their cultural backgrounds, leading to unique and diverse collections that reflect their heritage.",
+            "Art has been used as a form of communication for centuries, conveying messages and emotions that words sometimes cannot express.",
+            "The rise of sustainable fashion is changing the industry, with designers focusing on eco-friendly materials and ethical production practices.",
+            "Technology has transformed the creative process, with tools like digital design software and 3D printing allowing for new forms of artistic expression.",
+            "Street art has evolved from vandalism to a respected art form, with many artists gaining international recognition for their work in public spaces.",
+            "Social media platforms like Instagram and TikTok have revolutionized the fashion industry, allowing emerging designers and influencers to showcase their work and reach global audiences instantly."
+        ];
+
+        document.getElementById('generate-button').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fun-fact').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
